@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@1&family=Antic+Slab&family=Recursive:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
+    <title>Rose</title>
+</head>
+<body>
+<nav id="navigation">
+    <div id="logo-img">
+        <a id="logo-link" href="index.html">
+            <img src="https://i.pinimg.com/originals/ed/51/ba/ed51ba6d8059843cf6596d46a4fb6ce1.jpg" width="100" height="100">
+        </a>
+    </div>
+    <ul class="menu">
+        <li> <a  href="index.html">Home</a></li>
+        <li> <a href="About.html">About</a></li>
+        <li><a href="book.html">Books</a></li>
+        <li><a class="active" href="comment.html">Comments</a></li>
+        <li>
+            <div id="search-image">
+                <input id="search-box" name="search" placeholder="your search text here"></input>
+                <img src="img/iconfinder_search_126577.png" alt="image" id="search" width="30px" height="30px">
+            </div>
+
+        </li>
+    </ul>
+</nav>
+<main>
+    <div class="comment-section">
+
+        <p> please add new comment here : </p>
+        <form class="myForm" onsubmit="return form_add_comment();">
+
+            <label class="audioOnly" for="user_name">user name</label>
+            <input id="user_name" type="text" name="user_name" required placeholder="user name">
+
+            <div class="input_comment">
+                <textarea id="comment_text" type="text" name="comment" required placeholder="comment"></textarea>
+            </div>
+            <button>Add comment</button>
+        </form>
+            <!-- comments container -->
+        <div class="comment_block">
+
+
+            <!-- new comment -->
+            <div class="new_comment">
+
+                <!-- build comment -->
+                <ul class="user_comment" id="comments_list">
+
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+        <footer>
+        <div id="left-footer">
+            <h3>Quick Links</h3>
+            <p>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="About.html">About</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="book.html">Books</a>
+                </li>
+            </ul>
+            </p>
+        </div>
+        <div id="right-footer">
+            <h3>Follow Us On</h3>
+            <div id="social-media-footer">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="img/iconfinder_25_social_2609558.png" alt="image" width="40px" height="40px">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</main>
+</body>
+<script src="script.js"></script>
+<script>
+    (function() {
+
+        display_comments();
+    })();
+</script>
+</html>
